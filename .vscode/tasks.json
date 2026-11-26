@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Active OpenGL File",
+            "type": "process",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-std=c++17",
+                "-g",
+                "${file}",
+                "${workspaceFolder}/dependencies/glad/src/glad.c",
+                "-I",
+                "${workspaceFolder}/dependencies/glad/include",
+                "-I",
+                "${workspaceFolder}/dependencies/LearnOpenGL",
+                "-I",
+                "C:/msys64/ucrt64/include",
+                "-o",
+                "${workspaceFolder}/build/${fileBasenameNoExtension}.exe",
+                "C:/msys64/ucrt64/lib/libglfw3.a",
+                "-lopengl32",
+                "-lgdi32",
+                "-luser32",
+                "-lshell32",
+                "-lwinmm",
+                "-mwindows"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+# compiled binaries
+build/*
+!build/.gitkeep
+
+# editor / OS files
+.vscode/.browse.*
+Thumbs.db
+.DS_Store
